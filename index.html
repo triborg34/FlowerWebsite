@@ -8,14 +8,32 @@
     <title>♥For Shaghayegh♥</title>
 </head>
 <script>
-    onload = () => {
-    const c = setTimeout(() => {
-        document.body.classList.remove("not-loaded");
-        clearTimeout(c);
-    }, 1000);
-};
+onload = () => {
+  const c = setTimeout(() => {
+    document.body.classList.remove("not-loaded");
+    clearTimeout(c);
+  }, 1000);
 
+  // time until flowers are finished (you can adjust)
+  const flowerDuration = 7000;
+
+  setTimeout(() => {
+    const el = document.getElementById("valentine-text");
+    const box = document.querySelector(".valentine");
+    const text = "Will you be my Valentine?";
+    let i = 0;
+
+    box.classList.add("show");
+
+    const typing = setInterval(() => {
+      el.textContent += text[i];
+      i++;
+      if (i >= text.length) clearInterval(typing);
+    }, 80);
+  }, flowerDuration);
+};
 </script>
+
 
 <body class="not-loaded">
     <div class="night"></div>
