@@ -851,6 +851,22 @@ body {
   transform: rotate(-10deg) rotateY(-180deg);
   animation: leaf-ans-3 3s linear infinite;
 }
+.valentine {
+  position: fixed;
+  bottom: 8vmin;
+  width: 100%;
+  text-align: center;
+  font-size: 4vmin;
+  color: white;
+  letter-spacing: .3vmin;
+  font-family: cursive;
+  text-shadow: 0 0 1vmin #ff9bd3;
+  opacity: 0;
+}
+
+.valentine.show {
+  opacity: 1;
+}
 
 @keyframes leaf-ans-1 {
   0%, 100% {
